@@ -8,7 +8,6 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
-
 var index_proj = require('./routes/index_proj');
 var feature_one = require('./routes/feature_one');
 var signup = require('./routes/signup');
@@ -48,6 +47,12 @@ var HermioneGranger = require('./routes/saved_profiles_routes/HermioneGranger');
 var SeverusSnape = require('./routes/saved_profiles_routes/SeverusSnape');
 var AlbusDumbledore = require('./routes/saved_profiles_routes/AlbusDumbledore');
 
+
+
+//WebApp Version 2 information listed below
+var version2= require('./routes/version2');
+
+
 // Example route
 // var user = require('./routes/user');
 //var homepage_data = require('./homepage_data.json');
@@ -76,7 +81,8 @@ if ('development' == app_proj.get('env')) {
 }
 
 // Add routes here
-app_proj.get('/', index_proj.viewData);
+//app_proj.get('/', index_proj.viewData);
+app_proj.get('/', version2.renderHome);
 app_proj.get('/index_proj', index_proj.viewData);
 app_proj.get('/feature_one', feature_one.main);
 
@@ -106,6 +112,12 @@ app_proj.get('/travel_diary_brittany', travel_diary.brit_main);
 app_proj.get('/travel_diary_wine', travel_diary.wine_main);
 app_proj.get('/travel_diary_signedin', travel_diary.brit_signedin);
 app_proj.get('/travel_diary_signedin', travel_diary.wine_signedin);
+
+//WebApp Version 2 Information below
+app_proj.get('/about', version2.renderAbout);
+app_proj.get('/featured_trips', version2.renderFeatTrips);
+app_proj.get('/contact', version2.renderContact);
+app_proj.get('/home', version2.renderHome);
 
 //app_proj.get('/project/:id', project.projectInfo);
 // Example route
