@@ -1,0 +1,15 @@
+{
+	"saved_trips1" : [
+		{
+			"trip" : "Brittany's Paris Trip",
+			"imgPath" : "img/portfolio/img4.jpg",
+			"link" : "/travel_diary_brittany"
+		},
+		{
+			"trip" : "Wine Tasting in Paris",
+			"imgPath" : "img/portfolio/img8.jpg",
+			"link" : "/travel_diary_wine"
+		}
+	]
+	
+}

@@ -1,0 +1,12 @@
+{
+	"edit_tripdiary": [
+		{
+			"tripname": "My EuroTrip",
+			"date": "May 1st, 2014",
+			"imgPath": "http://lorempixel.com/400/400/city",
+			"subname": "Short Stop at CYX",
+			"description": "This stop was at CYX and it was pretty mumbo wumbo jumbo etc!",
+			"aboutdesc": "This trip, I basically blah blah blah BLAH!!!"
+		}
+	]
+}

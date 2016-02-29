@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/signupB.css" rel="stylesheet">
+<link href="../css/stylish-portfolio.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfonts-->
+<!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
+<!--//webfonts-->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="login.js"></script>
+<script type="text/javascript" src="../routes/pro_land.js"></script>
+</head>
+<body>
+    <!-- Using partials to reduce the amount of code.
+        Look at the files with these names to find the code for it -->
+    {{> menu_bar_index}} 
+
+<div class="login">
+  <div class="heading">
+    <h2>Sign in</h2>
+    <form action="/pro_land" method="post">
+      {{#each msg}}
+      <h4>{{errormsg}}</h4>
+      {{/each}}
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control email" placeholder="Email" id="email" name="email" />
+      </div>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <input type="password" class="form-control password" placeholder="Password" name="password" id="password"/>
+      </div>
+        
+        <!--<button type="submit" class="float">Login</button>-->
+        <div class="row">
+              <div class="col-xs-4 col-md-4">
+                <!-- <a href="/pro_land" class="btn btn-dark btn-lg" id="sign">Login</a> -->
+                 <button name="signin_btn" type="submit" onclick="validateForm(this.form)">Sign in</button>
+              </div>
+
+              <div class="col-xs-4 col-md-4">
+                <a href="/create_account" class="btn btn-dark btn-lg signup" id="sign">Create Account</a>
+              </div>
+
+              <div class="col-xs-4 col-md-4">
+                <a href="/forgot_pw" class="btn btn-dark btn-lg signup" id="sign">Forgot Password</a>
+              </div>
+        </div>
+    </form>
+
+    <script language="javascript">
+      function validateForm(form)
+      {
+        var x = form.email.value;
+        var y = form.password.value;
+        if(x==null || x=="")
+        {
+          alert("Please fill in your email.");
+          return false;
+        }
+        else if(x=="" && y==null)
+        {
+          alert("Please enter an appropriate email and password.");
+          return false;
+        }
+        else if(y=="")
+        {
+          alert("Please enter a password");
+          return false;
+        }
+      }
+    </script>
+
+ 	</div>
+</div>
+
+
+
+     <!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

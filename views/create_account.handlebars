@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/signupB.css" rel="stylesheet">
+<link href="../css/stylish-portfolio.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
+
+<!--webfonts-->
+<!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
+<!--//webfonts-->
+</head>
+<body>
+    <!-- Using partials to reduce the amount of code.
+        Look at the files with these names to find the code for it -->
+    {{> menu_bar_index}} 
+
+<div class="login">
+  <div class="heading">
+    <h2>Create Account</h2>
+    <form action="/login" method="post">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <input type="password" class="form-control" id="pass"placeholder="Password" name="pass">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <input type="password" class="form-control" id="cpass"placeholder="Confirm Password" name="cpass">
+      </div>
+
+      <h3>By creating an account, you agree to our <span class="term"><a href="/terms_conditions">Terms and Conditions</a></span></h3>
+        <!--<button type="submit" class="float">Login</button>-->
+        <div class="row">
+              <div class="col-xs-4 col-md-4">
+                 <input type="submit" id="submitBtn" class="btn btn-default" onclick="check(this.form)" value="Create Account"></input>
+                <!-- <a href="/pro_land" class="btn btn-dark btn-lg signup" id="sign">Create Account</a> -->
+              </div>
+        </div>
+
+       </form>
+
+       <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                // if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd") {
+                //     window.open('target.html')/*opens the target page while Id & password matches*/
+                // }
+                // else {
+                  if(form.pass.value != form.cpass.value){
+                    alert("Error Password or Username") }/*displays error message*/
+                // }
+            }
+        </script>
+ 		</div>
+ </div>
+
+    <!-- scripts -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+     <!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
