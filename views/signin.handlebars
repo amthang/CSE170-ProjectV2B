@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/signupB.css" rel="stylesheet">
-<link href="../css/stylish-portfolio.css" rel="stylesheet">
-<!-- Bootstrap Core CSS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfonts-->
-<!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
-<!--//webfonts-->
+    <title>Wish Trip</title>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="login.js"></script>
-<script type="text/javascript" src="../routes/pro_land.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/custom_changes.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="../routes/pro_land.js"></script>
 </head>
 <body>
     <!-- Using partials to reduce the amount of code.
         Look at the files with these names to find the code for it -->
-    {{> menu_bar_index}} 
-
-<div class="login">
-  <div class="heading">
+    {{> menu_bar_indexv2}} 
+<section class="container">
     <h2>Sign in</h2>
     <form action="/pro_land" method="post">
       {{#each msg}}
       <h4>{{errormsg}}</h4>
       {{/each}}
-      <div class="input-group input-group-lg">
+      
+      <div class="input-group input-group-lg input_size">
         <span class="input-group-addon"><i class="fa fa-user"></i></span>
         <input type="text" class="form-control email" placeholder="Email" id="email" name="email" />
       </div>
 
-      <div class="input-group input-group-lg">
+      <div class="input-group input-group-lg input_size">
         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
         <input type="password" class="form-control password" placeholder="Password" name="password" id="password"/>
       </div>
-        
-        <!--<button type="submit" class="float">Login</button>-->
-        <div class="row">
-              <div class="col-xs-4 col-md-4">
-                <!-- <a href="/pro_land" class="btn btn-dark btn-lg" id="sign">Login</a> -->
-                 <button name="signin_btn" type="submit" onclick="validateForm(this.form)">Sign in</button>
-              </div>
-
-              <div class="col-xs-4 col-md-4">
-                <a href="/create_account" class="btn btn-dark btn-lg signup" id="sign">Create Account</a>
-              </div>
-
-              <div class="col-xs-4 col-md-4">
-                <a href="/forgot_pw" class="btn btn-dark btn-lg signup" id="sign">Forgot Password</a>
-              </div>
+      
+      <!--<button type="submit" class="float">Login</button>-->
+      <div class="row row_one">
+        <div class="col-xs-4 col-md-4">
+          <!-- <a href="/pro_land" class="btn btn-dark btn-lg" id="sign">Login</a> -->
+           <button name="signin_btn" class="btn btn-dark btn-lg" type="submit" onclick="validateForm(this.form)">Sign in</button>
         </div>
+      </div>
+
+      <div class="row row_two">
+        <div class="col-xs-4 col-md-4">
+          <a href="/create_account" class="btn btn-dark btn-lg signup" id="sign">Create Account</a>
+        </div>
+      </div>
+
+      <div class="row row_three">
+        <div class="col-xs-4 col-md-4">
+          <a href="/forgot_pw" class="btn btn-dark btn-lg signup" id="sign">Forgot Password</a>
+        </div>
+      </div>
     </form>
 
     <script language="javascript">
@@ -78,9 +88,7 @@
         }
       }
     </script>
-
- 	</div>
-</div>
+</section>
 
 
 

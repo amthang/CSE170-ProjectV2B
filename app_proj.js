@@ -118,6 +118,11 @@ app_proj.get('/about', version2.renderAbout);
 app_proj.get('/featured_trips', version2.renderFeatTrips);
 app_proj.get('/contact', version2.renderContact);
 app_proj.get('/home', version2.renderHome);
+app_proj.get('/search_results_feat', version2.renderMoreFeat);
+app_proj.get('/travel_diary_boston', version2.renderBoston);
+app_proj.get('/travel_diary_disneyland', version2.renderDisney);
+app_proj.get('/travel_diary_hk', version2.renderHK);
+app_proj.get('/travel_diary_sf', version2.renderSF);
 
 //app_proj.get('/project/:id', project.projectInfo);
 // Example route
