@@ -5,6 +5,7 @@ var hk = require('../version2_json/travel_diary_hk.json');
 var sf = require('../version2_json/travel_diary_sf.json');
 var disney = require('../version2_json/travel_diary_disney.json');
 var user_data = require('../version2_json/user_data.json');
+var sd = require('../version2_json/diary_entry_sd.json');
 
 exports.renderHome = function(req, res){
 	res.render('index_projv2');
@@ -53,16 +54,23 @@ exports.renderAddTrip = function(req, res){
 exports.addTripToPage = function(req, res){
 	var title = req.body.trip_title;
 	var description = req.body.trip_description;
+	var date = req.body.trip_date;
+	var img = req.body.trip_img;
 	var length = user_data.length;
 	var flag = "";
 
 	var trip_info = {
 		"circle_position" : "fa fa-circle",
 		"head" : title,
+		"img" : img,
 		"description" : description,
-		"date" : "randome"
+		"date" : date,
 	}
 
 	user_data["profile_data"].unshift(trip_info);
 	res.render('user_profile', user_data);
+}
+
+exports.renderSD = function(req, res){
+	res.render('user_see_diary', sd);
 }

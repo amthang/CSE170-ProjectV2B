@@ -1,0 +1,18 @@
+{
+	"title" : "Celebrating Leap Year in San Diego",
+
+	"trip" : [
+		{
+			"place_visited": "Gaslamp",
+			"description": "Walking was more convenient than driving!"
+		},
+		{
+			"place_visited": "SD Convention Center",
+			"description": "Walking was more convenient than driving!"
+		},
+		{
+			"place_visited": "Seaport Village",
+			"description": "Small shops and entertainment."
+		}
+	]
+}

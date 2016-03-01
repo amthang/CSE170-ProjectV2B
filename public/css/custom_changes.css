@@ -74,6 +74,10 @@ body{
 	color: #000000;
 }
 
-#trip_information{
+#trip_img{
+	color: #666666;
+}
 
+#img_size{
+	width: 100%;
 }

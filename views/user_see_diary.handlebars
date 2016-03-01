@@ -15,37 +15,48 @@
 
 <body>
     {{> menu_bar_signedin}}
-    <section class="trip_information">
-        <center>
-            <h2>Add New Trip Diary</h2>
-            <form action="/addTrip" data-ajax="false" method="POST" class="trip_form" style="width: 80%" id="trip_form">
-                <div class="trip_field">
-                    <label class="trip_img">Select Image for Upload</label>
-                    <input class="btn btn-light" type="file" name="trip_img" id="trip_img" />
-                </div>
 
-                <div class="trip_field">
-                    <label class="trip_formField">Title of Trip</label>
-                    <input id="trip_title" name="trip_title" class="trip_color" type="text" name="title" placeholder="Create Title" />
+    <br>
+    <br>
+    <br>
+
+    <h2>{{title}}</h2>
+    <nav id="filter" class="col-md-4 text center">
+        <ul>
+            <li><a href="#" class="current btn-theme btn-small">Recorded Trips</a></li>
+            <li><a href="#" class="btn-theme btn-small">Future Travels</a></li>
+            
+        </ul>
+    </nav>
+    <nav id="filter" class="col-md-4 text center">
+        <ul>
+            <li><a href="#" class="btn-theme btn-small">Saved Profiles</a></li>
+            <li><a href="#" class="btn-theme btn-small">Saved Trips</a></li>
+        </ul>
+    </nav>
+
+    <ul class="timeline">
+        {{#each trip}}
+        <li class="{{invert}}">
+            <div class="timeline-badge">
+              <a><i class="{{circle_position}}" id=""></i></a>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4>{{place_visited}}</h4>
                 </div>
-                <br>
-                <div class="trip_field">
-                    <label class="trip_formField">Date of Trip</label>
-                    <input id="trip_date" name="trip_date" class="trip_color" type="text"name="date" placeholder="Enter Date Here" />
+                <div class="timeline-body">
+                    <p>{{description}}</p>
                 </div>
-                <br>
-                <div class="trip_field">
-                    <label class="trip_formField">Description</label>
-                    <textarea id="trip_description" name="trip_description" class="trip_color" name="description" placeholder="Enter Description Here"></textarea>
+                <div class="timeline-footer">
+                    <p class="text-right">.</p>
                 </div>
-                
-                <br>
-                <div style="display: none"></div>
-                <br>
-                <button class="btn-theme btn-lg" style="float: left" type="submit">Create</button>
-            </form>
-        </center>
-    </section>
+            </div>
+        </li>
+        {{/each}}
+        
+        <li class="clearfix no-float"></li>
+    </ul>
 
     <p class="footer">Icons by <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome 4.1 Icons</a>.<br />
       Created by <a href="http://jenniferperrin.com">Jennifer Perrin</a>

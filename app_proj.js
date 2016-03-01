@@ -125,6 +125,7 @@ app_proj.get('/travel_diary_hk', version2.renderHK);
 app_proj.get('/travel_diary_sf', version2.renderSF);
 app_proj.get('/user_profile', version2.renderUserProfile);
 app_proj.get('/add_tripdiary', version2.renderAddTrip);
+app_proj.get('/user_see_diary_sd', version2.renderSD);
 
 app_proj.post('/addTrip', version2.addTripToPage);
 
