@@ -20,22 +20,40 @@
         <img class="profile_img" id="profile_img" src="../img/camera.jpg"></img>
     </section>
 
-    <h2>Super Simple Bootstrap Responsive Timeline</h2>
+    <h2>Welcome to your profile</h2>
     <nav id="filter" class="col-md-4 text center">
         <ul>
-            <li><a href="/travel_diary" class="current btn-theme btn-small" data-filter="*">All Images</a></li>
-            <li><a href="/travel_diary" class="btn-theme btn-small" data-filter=".webdesign">Travel Diary</a></li>
+            <li><a href="#" class="current btn-theme btn-small">Recorded Trips</a></li>
+            <li><a href="#" class="btn-theme btn-small">Future Travels</a></li>
             
         </ul>
     </nav>
     <nav id="filter" class="col-md-4 text center">
-    <li><a href="/travel_diary" class="btn-theme btn-small" data-filter=".photography">Future Travels</a></li>
-            <li><a href="/travel_diary" class="btn-theme btn-small" data-filter=".print">Misc</a></li>
-</nav>
-    <br>
-    <br>
+        <ul>
+            <li><a href="#" class="btn-theme btn-small">Saved Profiles</a></li>
+            <li><a href="#" class="btn-theme btn-small">Saved Trips</a></li>
+        </ul>
+    </nav>
 
     <ul class="timeline">
+        <li class="">
+            <div class="timeline-badge">
+              <a><i class="fa fa-circle" id=""></i></a>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4>+</h4>
+                </div>
+                <a href="/add_tripdiary" class="btn-theme">
+                    <div class="timeline-body">
+                        <h2><span class="glyphicon glyphicon-plus"></span>Add a new trip</h2>
+                    </div>
+                    <div class="timeline-footer">
+                        <p class="text-right">+</p>
+                    </div>
+                </a>
+            </div>
+        </li>
         {{#each profile_data}}
         <li class="{{invert}}">
             <div class="timeline-badge">

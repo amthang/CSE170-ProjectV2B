@@ -1,4 +1,5 @@
 var data = require("../data.json");
+var user_data = require("../version2_json/user_data.json");
 
 exports.main = function(req, res){
 	res.render('pro_land')
@@ -18,7 +19,7 @@ exports.checkLogin = function(req, res){
 			}
 		}
 		if (flag) {
-			res.render('pro_land');
+			res.render('user_profile', user_data);
 
 		} else {
 			res.render('signin', data);

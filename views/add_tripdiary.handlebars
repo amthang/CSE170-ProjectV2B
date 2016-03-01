@@ -15,48 +15,31 @@
 
 <body>
     {{> menu_bar_signedin}}
-
-    <section>
-        <img class="profile_img" id="profile_img" src="../img/camera.jpg"></img>
+    <section class="trip_information">
+        <center>
+            <h2>Add New Trip Diary</h2>
+            <form action="/addTrip" data-ajax="false" method="POST" class="trip_form" style="width: 50%" id="trip_form">
+                <div class="trip_field">
+                    <label class="trip_formField">Title</label>
+                    <input id="trip_title" name="trip_title" class="trip_color" type="text" name="title" placeholder="Create Title" />
+                </div>
+                <br>
+                <!-- <div class="field">
+                    <label class="formField">Category</label>
+                    <input type="text" name="category" placeholder="Pick a Category">
+                </div>
+                <br> -->
+                <div class="trip_field">
+                    <label class="trip_formField">Description</label>
+                    <textarea id="trip_description" name="trip_description" class="trip_color" name="description" placeholder="Enter description here"></textarea>
+                </div>
+                <br>
+                <div style="display: none"></div>
+                <br>
+                <button class="btn-theme btn-lg" style="float: left" type="submit">Create</button>
+            </form>
+        </center>
     </section>
-
-    <h2>Super Simple Bootstrap Responsive Timeline</h2>
-    <nav id="filter" class="col-md-4 text center">
-        <ul>
-            <li><a href="/travel_diary" class="current btn-theme btn-small" data-filter="*">All Images</a></li>
-            <li><a href="/travel_diary" class="btn-theme btn-small" data-filter=".webdesign">Travel Diary</a></li>
-            
-        </ul>
-    </nav>
-    <nav id="filter" class="col-md-4 text center">
-    <li><a href="/travel_diary" class="btn-theme btn-small" data-filter=".photography">Future Travels</a></li>
-            <li><a href="/travel_diary" class="btn-theme btn-small" data-filter=".print">Misc</a></li>
-</nav>
-    <br>
-    <br>
-
-    <ul class="timeline">
-        {{#each profile_data}}
-        <li class="{{invert}}">
-            <div class="timeline-badge">
-              <a><i class="{{circle_position}}" id=""></i></a>
-            </div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4>{{head}}</h4>
-                </div>
-                <div class="timeline-body">
-                    <p>{{description}}</p>
-                </div>
-                <div class="timeline-footer">
-                    <p class="text-right">{{date}}</p>
-                </div>
-            </div>
-        </li>
-        {{/each}}
-        
-        <li class="clearfix no-float"></li>
-    </ul>
 
     <p class="footer">Icons by <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome 4.1 Icons</a>.<br />
       Created by <a href="http://jenniferperrin.com">Jennifer Perrin</a>

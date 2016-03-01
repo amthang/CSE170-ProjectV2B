@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/signupB.css" rel="stylesheet">
-<link href="../css/stylish-portfolio.css" rel="stylesheet">
-<!-- Bootstrap Core CSS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfonts-->
-<!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
-<!--//webfonts-->
+    <title>Wish Trip</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/custom_changes.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- Using partials to reduce the amount of code.
         Look at the files with these names to find the code for it -->
-    {{> menu_bar_index}} 
+    {{> menu_bar_indexv2}} 
 
-<div class="login">
-  <div class="heading">
+<section class="container">
     <h2>Signed out</h2>
     <h4>Thank you for using Wish Trip!</h4>
-    <form action="#">
 
-  <!--     <div class="input-group input-group-lg">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input type="text" class="form-control" placeholder="Username or email">
-          </div>
-
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-          <input type="password" class="form-control" placeholder="Password">
-        </div> -->
-        
-        <!--<button type="submit" class="float">Login</button>-->
-        <div class="row">
-          <div class="col-xs-4 col-lg-offset-1">
-            <div class="row">
-              <div class="col-xs-4">
-                <a href="/signin" class="btn btn-dark btn-lg" id="sign">Login</a>
-              </div>
-              <div class="col-xs-4 col-xs-offset-3">
-                <a href="/index_proj" class="btn btn-dark btn-lg" id="sign">Homepage</a>
-              </div>
-
-            </div>
+        <div class="row row_two">
+          <div class="col-xs-4 col-md-4">
+            <a href="/signin" class="btn btn-dark btn-lg signup" id="sign">Sign In</a>
           </div>
         </div>
-       </form>
+
+        <div class="row row_three">
+          <div class="col-xs-4 col-md-4">
+            <a href="/home" class="btn btn-dark btn-lg signup" id="sign">Homepage</a>
+          </div>
+        </div>
  		</div>
  </div>
+</section>
 
      <!-- jQuery -->
 <script src="js/jquery.js"></script>

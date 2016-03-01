@@ -123,6 +123,10 @@ app_proj.get('/travel_diary_boston', version2.renderBoston);
 app_proj.get('/travel_diary_disneyland', version2.renderDisney);
 app_proj.get('/travel_diary_hk', version2.renderHK);
 app_proj.get('/travel_diary_sf', version2.renderSF);
+app_proj.get('/user_profile', version2.renderUserProfile);
+app_proj.get('/add_tripdiary', version2.renderAddTrip);
+
+app_proj.post('/addTrip', version2.addTripToPage);
 
 //app_proj.get('/project/:id', project.projectInfo);
 // Example route
