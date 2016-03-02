@@ -6,6 +6,8 @@ var sf = require('../version2_json/travel_diary_sf.json');
 var disney = require('../version2_json/travel_diary_disney.json');
 var user_data = require('../version2_json/user_data.json');
 var sd = require('../version2_json/diary_entry_sd.json');
+var paris = require('../version2_json/diary_entry_paris.json');
+var ucsd = require('../version2_json/diary_entry_ucsd.json');
 
 exports.renderHome = function(req, res){
 	res.render('index_projv2');
@@ -55,14 +57,14 @@ exports.addTripToPage = function(req, res){
 	var title = req.body.trip_title;
 	var description = req.body.trip_description;
 	var date = req.body.trip_date;
-	var img = req.body.trip_img;
+	//var img = req.body.trip_img;
 	var length = user_data.length;
 	var flag = "";
 
 	var trip_info = {
 		"circle_position" : "fa fa-circle",
 		"head" : title,
-		"img" : img,
+		"img" : "img/user/seuss.jpg",
 		"description" : description,
 		"date" : date,
 	}
@@ -73,4 +75,28 @@ exports.addTripToPage = function(req, res){
 
 exports.renderSD = function(req, res){
 	res.render('user_see_diary', sd);
+}
+
+exports.renderParis = function(req, res){
+	res.render('user_see_diary', paris);
+}
+
+exports.renderUCSD = function(req, res){
+	res.render('user_see_diary', ucsd);
+}
+
+exports.renderUserContact = function(req, res){
+	res.render('contact');
+}
+
+exports.renderSD_user = function(req, res){
+	res.render('user_see_profile_diary', sd);
+}
+
+exports.renderParis_user = function(req, res){
+	res.render('user_see_profile_diary', paris);
+}
+
+exports.renderUCSD_user = function(req, res){
+	res.render('user_see_profile_diary', ucsd);
 }

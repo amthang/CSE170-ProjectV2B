@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/custom_changes.css" />
     </head>
 
-<body>
-    {{> menu_bar_signedin}}
+<body onload="checkEdits()">
+    {{> menu_bar_signedinv2}}
 
     <br>
     <br>
@@ -36,16 +36,18 @@
     </nav>
 
     <ul class="timeline">
+        <li>
+
         {{#each trip}}
         <li class="{{invert}}">
             <div class="timeline-badge">
               <a><i class="{{circle_position}}" id=""></i></a>
             </div>
-            <div class="timeline-panel">
+            <div id="edit" contenteditable="true" class="timeline-panel">
                 <div class="timeline-heading">
                     <h4>{{place_visited}}</h4>
                 </div>
-                <div class="timeline-body">
+                <div id="edit" contenteditable="true" class="timeline-body">
                     <p>{{description}}</p>
                 </div>
                 <div class="timeline-footer">
@@ -54,13 +56,47 @@
             </div>
         </li>
         {{/each}}
-        
+
         <li class="clearfix no-float"></li>
     </ul>
+
+    <input type="button" class="btn btn-dark btn-lg" value="Save Edits" onclick="saveEdits()"/>
+
+    <section id="note">
+    <div id="update">Edit your trips and click "Save Edits" to save your changes!</div>
+    </section>
 
     <p class="footer">Icons by <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome 4.1 Icons</a>.<br />
       Created by <a href="http://jenniferperrin.com">Jennifer Perrin</a>
     </p>
+
+<script>
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+
+}
+</script>
+
+<script>
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>

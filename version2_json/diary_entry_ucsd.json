@@ -1,0 +1,18 @@
+{
+	"title" : "First Adventure!",
+
+	"trip" : [
+		{
+			"place_visited": "Palais-Royal",
+			"description": "This place is a must see!"
+		},
+		{
+			"place_visited": "Carnavalet Museum",
+			"description": "Beautiful! Not something you see everyday!"
+		},
+		{
+			"place_visited": "Parc Asterix",
+			"description": "An amusement park like no other! I find it to be of a different atmosphere than what I normally see back at home in United States!"
+		}
+	]
+}

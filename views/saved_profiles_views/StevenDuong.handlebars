@@ -1,155 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Steven Duong</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/1-col-portfolio.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
+    <head>
+        <title>Steven Duong</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="../css/stylish-portfolio.css" />
+        <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+        <link rel="stylesheet" href="../css/public_profile.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/feature_newadditions.css" />
+        <link rel="stylesheet" href="css/custom_changes.css" />
+    </head>
 
 <body>
+   {{> menu_bar_signedinv2}}
 
-    <!-- Page Content -->
-    <div class="container">
+    <section>
+        <img class="profile_img" id="profile_img" src="../img/camera.jpg"></img>
+    </section>
 
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Steven Duong
-                    <small>Profile Page</small>
-                </h1>
+    <h2>Steven Duong</h2>
+    <nav id="filter" class="col-md-4 text center">
+        <ul>
+            <li><a href="#" class="current btn-theme btn-small">Recorded Trips</a></li>
+            <li><a href="#" class="btn-theme btn-small">Future Travels</a></li>
+            
+        </ul>
+    </nav>
+    <br>
+    <br>
+
+    <ul class="timeline">
+        {{#each profile_data}}
+        <li class="{{invert}}">
+            <div class="timeline-badge">
+              <a><i class="{{circle_position}}" id=""></i></a>
             </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Project One -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project One</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Two -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Two</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Three -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Three</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Four -->
-        <div class="row">
-
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Four</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Five -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Five</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4>{{head}}</h4>
                 </div>
+                <a href="/user_profile_diary_{{location}}" class="btn-theme">
+                    <div class="timeline-body">
+                        <img id="img_size" src="{{img}}"></img>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="timeline-footer">
+                        <p class="text-right">{{date}}</p>
+                    </div>
+                </a>
             </div>
-            <!-- /.row -->
-        </footer>
+        </li>
+        {{/each}}
+        
+        <li class="clearfix no-float"></li>
+    </ul>
 
-    </div>
-    <!-- /.container -->
+    <p class="footer">Icons by <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome 4.1 Icons</a>.<br />
+      Created by <a href="http://jenniferperrin.com">Jennifer Perrin</a>
+    </p>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
 
 </body>
 

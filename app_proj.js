@@ -126,6 +126,12 @@ app_proj.get('/travel_diary_sf', version2.renderSF);
 app_proj.get('/user_profile', version2.renderUserProfile);
 app_proj.get('/add_tripdiary', version2.renderAddTrip);
 app_proj.get('/user_see_diary_sd', version2.renderSD);
+app_proj.get('/user_see_diary_paris', version2.renderParis);
+app_proj.get('/user_see_diary_ucsd', version2.renderUCSD);
+app_proj.get('/user_contact', version2.renderUserContact);
+app_proj.get('/user_profile_diary_sd', version2.renderSD_user);
+app_proj.get('/user_profile_diary_paris', version2.renderParis_user);
+app_proj.get('/user_profile_diary_ucsd', version2.renderUCSD_user);
 
 app_proj.post('/addTrip', version2.addTripToPage);
 

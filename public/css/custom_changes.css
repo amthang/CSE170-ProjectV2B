@@ -81,3 +81,9 @@ body{
 #img_size{
 	width: 100%;
 }
+
+#note{
+	padding-left: 20px;
+	padding-right: 10px;
+	color: #666666;
+}

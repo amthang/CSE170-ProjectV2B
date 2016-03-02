@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
     <head>
-        <title>Joel Krejmas</title>
+        <title>My Profile</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -15,14 +13,14 @@
         <link rel="stylesheet" href="css/custom_changes.css" />
     </head>
 
-<body>
-   {{> menu_bar_signedinv2}}
+<body onload="checkEdits()">
+    {{> menu_bar_signedinv2}}
 
-    <section>
-        <img class="profile_img" id="profile_img" src="../img/camera.jpg"></img>
-    </section>
+    <br>
+    <br>
+    <br>
 
-    <h2>Joel Krejmas</h2>
+    <h2>{{title}}</h2>
     <nav id="filter" class="col-md-4 text center">
         <ul>
             <li><a href="#" class="current btn-theme btn-small">Recorded Trips</a></li>
@@ -30,38 +28,63 @@
             
         </ul>
     </nav>
-    <br>
-    <br>
 
     <ul class="timeline">
-        {{#each profile_data}}
+        <li>
+
+        {{#each trip}}
         <li class="{{invert}}">
             <div class="timeline-badge">
               <a><i class="{{circle_position}}" id=""></i></a>
             </div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
-                    <h4>{{head}}</h4>
+                    <h4>{{place_visited}}</h4>
                 </div>
-                <a href="/user_profile_diary_{{location}}" class="btn-theme">
-                    <div class="timeline-body">
-                        <img id="img_size" src="{{img}}"></img>
-                        <p>{{description}}</p>
-                    </div>
-                    <div class="timeline-footer">
-                        <p class="text-right">{{date}}</p>
-                    </div>
-                </a>
+                <div class="timeline-body">
+                    <p>{{description}}</p>
+                </div>
+                <div class="timeline-footer">
+                    <p class="text-right">.</p>
+                </div>
             </div>
         </li>
         {{/each}}
-        
+
         <li class="clearfix no-float"></li>
     </ul>
 
     <p class="footer">Icons by <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome 4.1 Icons</a>.<br />
       Created by <a href="http://jenniferperrin.com">Jennifer Perrin</a>
     </p>
+
+<script>
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+
+}
+</script>
+
+<script>
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
