@@ -10,6 +10,7 @@ var paris = require('../version2_json/diary_entry_paris.json');
 var ucsd = require('../version2_json/diary_entry_ucsd.json');
 var travel_diary_wine = require('../travel_diary_wine.json');
 var travel_diary_brittany = require('../travel_diary_brittany.json');
+var future_travel_diaries = require('../version2_json/future_travel_diaries.json');
 
 exports.renderHome = function(req, res){
 	res.render('index_projv2');
@@ -109,4 +110,8 @@ exports.renderDiaryWine = function(req, res){
 
 exports.renderDiaryBrit = function(req, res){
 	res.render('travel_diary_signedin', travel_diary_brittany);
+}
+
+exports.renderFutureTravels = function(req, res){
+	res.render('future_travels', future_travel_diaries);
 }

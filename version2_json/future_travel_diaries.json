@@ -1,0 +1,33 @@
+{
+	"profile_data" : [
+		{
+			"invert" : "",
+			"circle_position" : "fa fa-circle",
+			"head" : "Celebrating After UCSD",
+			"location" : "after_ucsd",
+			"img" : "img/user/sd.jpg",
+			"description" : "What I plan to do after graduating UCSD!",
+			"date" : "Feb-29-2016"
+		},
+
+		{
+			"invert" : "timeline-inverted",
+			"circle_position" : "fa fa-circle invert",
+			"head" : "Road Trip to New York",
+			"location" : "new_york",
+			"img" : "img/user/paris.jpg",
+			"description" : "My future plan to visit New York!",
+			"date" : "Feb-14-2016"
+		},
+
+		{
+			"invert" : "",
+			"circle_position" : "fa fa-circle",
+			"head" : "Month Across Asia",
+			"location" : "asia",
+			"img" : "img/user/ucsd.jpg",
+			"description" : "I hope to travel to these places in Asia when I have the time in the future!",
+			"date" : "Jan-5-2016"
+		}
+	] 
+}
