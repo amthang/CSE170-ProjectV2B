@@ -3,12 +3,12 @@
 		{
 			"trip" : "Brittany's Paris Trip",
 			"imgPath" : "img/portfolio/img4.jpg",
-			"link" : "/travel_diary_brittany"
+			"link" : "/travel_diary_brittany_user"
 		},
 		{
 			"trip" : "Wine Tasting in Paris",
 			"imgPath" : "img/portfolio/img8.jpg",
-			"link" : "/travel_diary_wine"
+			"link" : "/travel_diary_wine_user"
 		}
 	]
 	

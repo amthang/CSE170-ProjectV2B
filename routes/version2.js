@@ -8,6 +8,8 @@ var user_data = require('../version2_json/user_data.json');
 var sd = require('../version2_json/diary_entry_sd.json');
 var paris = require('../version2_json/diary_entry_paris.json');
 var ucsd = require('../version2_json/diary_entry_ucsd.json');
+var travel_diary_wine = require('../travel_diary_wine.json');
+var travel_diary_brittany = require('../travel_diary_brittany.json');
 
 exports.renderHome = function(req, res){
 	res.render('index_projv2');
@@ -86,7 +88,7 @@ exports.renderUCSD = function(req, res){
 }
 
 exports.renderUserContact = function(req, res){
-	res.render('contact');
+	res.render('user_contact');
 }
 
 exports.renderSD_user = function(req, res){
@@ -99,4 +101,12 @@ exports.renderParis_user = function(req, res){
 
 exports.renderUCSD_user = function(req, res){
 	res.render('user_see_profile_diary', ucsd);
+}
+
+exports.renderDiaryWine = function(req, res){
+	res.render('travel_diary_signedin', travel_diary_wine);
+}
+
+exports.renderDiaryBrit = function(req, res){
+	res.render('travel_diary_signedin', travel_diary_brittany);
 }
