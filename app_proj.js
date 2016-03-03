@@ -83,7 +83,7 @@ if ('development' == app_proj.get('env')) {
 // Add routes here
 //app_proj.get('/', index_proj.viewData);
 app_proj.get('/', version2.renderHome);
-app_proj.get('/index_proj', index_proj.viewData);
+//app_proj.get('/index_proj', index_proj.viewData);
 app_proj.get('/feature_one', feature_one.main);
 
 app_proj.get('/search_results', search_results.main);
