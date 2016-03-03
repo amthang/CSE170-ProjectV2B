@@ -1,7 +1,7 @@
 var results = require('../search_results.json');
 var paris_rsult = require('../paris.json');
 var sd_rsult = require('../sd.json');
-
+var data = require('../error_msg.json');
 
 
 exports.main = function(req, res){
@@ -40,7 +40,7 @@ exports.checkSearch = function(req, res){
 
 		else
 		{
-			res.render('index_proj');
+			res.render('index_projv2', data);
 		}
 	}
 }
