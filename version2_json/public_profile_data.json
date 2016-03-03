@@ -141,7 +141,7 @@
 		{
 			"invert" : "timeline-inverted",
 			"circle_position" : "fa fa-circle invert",
-			"head" : "Paris Trip",
+			"head" : "The School Hogwarts",
 			"location" : "paris",
 			"img" : "img/user/hogwarts.jpg",
 			"description" : "This school looks amazing any time of the year. I do get some weird feelings about this though...",
@@ -155,6 +155,70 @@
 			"location" : "ucsd",
 			"img" : "img/user/railway.jpg",
 			"description" : "I welcome a new journey in my life! I will be the best person I can be.",
+			"date" : "Jan-5-2016"
+		}
+	] ,
+
+	"profile_hermione" : [
+		{
+			"invert" : "",
+			"circle_position" : "fa fa-circle",
+			"head" : "I'll Miss Them",
+			"location" : "sd",
+			"img" : "img/user/hpgang.jpg",
+			"description" : "These guys were nuts but they're the best T-T",
+			"date" : "Feb-29-2016"
+		},
+
+		{
+			"invert" : "timeline-inverted",
+			"circle_position" : "fa fa-circle invert",
+			"head" : "Delighted To Be Here",
+			"location" : "paris",
+			"img" : "img/user/hogwarts.jpg",
+			"description" : "I promise I'll be the best at this school!",
+			"date" : "Feb-14-2016"
+		},
+
+		{
+			"invert" : "",
+			"circle_position" : "fa fa-circle",
+			"head" : "Funny Fact",
+			"location" : "ucsd",
+			"img" : "img/user/railway.jpg",
+			"description" : "I met some neat but weird friends on this train!",
+			"date" : "Jan-5-2016"
+		}
+	] ,
+
+		"profile_snape" : [
+		{
+			"invert" : "",
+			"circle_position" : "fa fa-circle",
+			"head" : "I'll Miss Them",
+			"location" : "sd",
+			"img" : "img/user/hpgang.jpg",
+			"description" : "These guys were nuts but I'm glad I've met them...",
+			"date" : "Feb-29-2016"
+		},
+
+		{
+			"invert" : "timeline-inverted",
+			"circle_position" : "fa fa-circle invert",
+			"head" : "New Year New Tricks!",
+			"location" : "paris",
+			"img" : "img/user/hogwarts.jpg",
+			"description" : "Ahh yes, another time to spook the new kids. Muahaha!",
+			"date" : "Feb-14-2016"
+		},
+
+		{
+			"invert" : "",
+			"circle_position" : "fa fa-circle",
+			"head" : "On this Train",
+			"location" : "ucsd",
+			"img" : "img/user/railway.jpg",
+			"description" : "You'd think I'd just teleport to school?",
 			"date" : "Jan-5-2016"
 		}
 	] 
