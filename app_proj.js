@@ -135,6 +135,7 @@ app_proj.get('/user_profile_diary_ucsd', version2.renderUCSD_user);
 app_proj.get('/travel_diary_wine_user', version2.renderDiaryWine);
 app_proj.get('/travel_diary_brittany_user', version2.renderDiaryBrit);
 app_proj.get('/future_travels', version2.renderFutureTravels);
+app_proj.get('/user_see_diary_newTrip', version2.renderNewTrip);
 
 app_proj.post('/addTrip', version2.addTripToPage);
 

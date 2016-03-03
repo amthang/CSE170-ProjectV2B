@@ -11,6 +11,7 @@ var ucsd = require('../version2_json/diary_entry_ucsd.json');
 var travel_diary_wine = require('../travel_diary_wine.json');
 var travel_diary_brittany = require('../travel_diary_brittany.json');
 var future_travel_diaries = require('../version2_json/future_travel_diaries.json');
+var emptyTrip = require('../version2_json/new_trip_info.json');
 
 exports.renderHome = function(req, res){
 	res.render('index_projv2');
@@ -60,13 +61,13 @@ exports.addTripToPage = function(req, res){
 	var title = req.body.trip_title;
 	var description = req.body.trip_description;
 	var date = req.body.trip_date;
-	//var img = req.body.trip_img;
 	var length = user_data.length;
 	var flag = "";
 
 	var trip_info = {
 		"circle_position" : "fa fa-circle",
 		"head" : title,
+		"location" : "newTrip",
 		"img" : "img/user/seuss.jpg",
 		"description" : description,
 		"date" : date,
@@ -114,4 +115,8 @@ exports.renderDiaryBrit = function(req, res){
 
 exports.renderFutureTravels = function(req, res){
 	res.render('future_travels', future_travel_diaries);
+}
+
+exports.renderNewTrip = function(req, res){
+	res.render('user_see_diary', emptyTrip);
 }

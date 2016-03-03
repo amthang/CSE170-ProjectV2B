@@ -3,6 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	initializeCamera();
 });
 
 /*
@@ -16,4 +17,11 @@ function initializePage() {
 function projectClick(e){
 	e.preventDefault();
 	ga("send", "event", "likeBtn", "click");
+}
+
+/*
+ * Function that is called when the document is ready.
+ */
+function initializeCamera() {
+  initCamera();
 }
