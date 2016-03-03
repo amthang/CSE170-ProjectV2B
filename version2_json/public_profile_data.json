@@ -77,52 +77,52 @@
 		{
 			"invert" : "timeline-inverted",
 			"circle_position" : "fa fa-circle invert",
-			"head" : "Paris Trip",
+			"head" : "Best Hot Dogs in Town",
 			"location" : "paris",
-			"img" : "img/user/paris.jpg",
-			"description" : "I decided to take a week break and went to Paris. It was a lovely time.",
+			"img" : "img/user/pinks.jpg",
+			"description" : "I haven't had these in forever and, boy, were they a treat! Yumm",
 			"date" : "Feb-14-2016"
 		},
 
 		{
 			"invert" : "",
 			"circle_position" : "fa fa-circle",
-			"head" : "First Adventure!",
+			"head" : "Starting the New Year Just Right",
 			"location" : "ucsd",
-			"img" : "img/user/ucsd.jpg",
-			"description" : "Starting out my first adventure of year!",
+			"img" : "img/user/626.jpg",
+			"description" : "The night market never disappoints! Met the many YouTube stars and ate great food!",
 			"date" : "Jan-5-2016"
 		}
 	] ,
 
-	"profile_data3" : [
+	"profile_joel" : [
 		{
 			"invert" : "",
 			"circle_position" : "fa fa-circle",
-			"head" : "Celebrating Leap Year in San Diego",
+			"head" : "Gaslamp in San Diego",
 			"location" : "sd",
-			"img" : "img/user/sd.jpg",
-			"description" : "I decided to stay local for this celebration in the city I currently reside.",
+			"img" : "img/user/gaslamp.jpg",
+			"description" : "I put this on my to-go spot when visiting in San Diego because of another person recommending it.",
 			"date" : "Feb-29-2016"
 		},
 
 		{
 			"invert" : "timeline-inverted",
 			"circle_position" : "fa fa-circle invert",
-			"head" : "Paris Trip",
+			"head" : "Nights of Vegas",
 			"location" : "paris",
-			"img" : "img/user/paris.jpg",
-			"description" : "I decided to take a week break and went to Paris. It was a lovely time.",
+			"img" : "img/user/vegas.jpg",
+			"description" : "Stopped by Vegas in our road trip. What happens in Vegas stays in Vegas!",
 			"date" : "Feb-14-2016"
 		},
 
 		{
 			"invert" : "",
 			"circle_position" : "fa fa-circle",
-			"head" : "First Adventure!",
+			"head" : "Adventure at the Canyons!!",
 			"location" : "ucsd",
-			"img" : "img/user/ucsd.jpg",
-			"description" : "Starting out my first adventure of year!",
+			"img" : "img/user/gc.jpg",
+			"description" : "Life changing experience! Learning about the history of this place and taking in all its marvel.",
 			"date" : "Jan-5-2016"
 		}
 	] ,
