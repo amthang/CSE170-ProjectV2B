@@ -1,0 +1,10 @@
+{
+	"title" : "Your New Diary",
+
+	"trip" : [
+		{
+			"place_visited": "Enter Place Here",
+			"description": "Enter Description Here"
+		}
+	]
+}
