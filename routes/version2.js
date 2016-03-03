@@ -13,7 +13,19 @@ var travel_diary_brittany = require('../travel_diary_brittany.json');
 var future_travel_diaries = require('../version2_json/future_travel_diaries.json');
 var emptyTrip = require('../version2_json/new_trip_info.json');
 
+
 exports.renderHome = function(req, res){
+	// var random_num = Math.random();
+	// console.log(random_num);
+
+	// if(random_num < 0.5) {
+	// 	res.render('index_projv2')
+	// }
+	// else {
+	// 	res.render('index_proj', about_data) //, menu_options)
+ 	//res.render('index_proj', menu_content) 
+	// }
+
 	res.render('index_projv2');
 }
 
