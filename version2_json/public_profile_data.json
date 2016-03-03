@@ -127,14 +127,14 @@
 		}
 	] ,
 
-	"profile_data4" : [
+	"profile_hogwarts" : [
 		{
 			"invert" : "",
 			"circle_position" : "fa fa-circle",
-			"head" : "Celebrating Leap Year in San Diego",
+			"head" : "Saying Goodbye",
 			"location" : "sd",
-			"img" : "img/user/sd.jpg",
-			"description" : "I decided to stay local for this celebration in the city I currently reside.",
+			"img" : "img/user/hpgang.jpg",
+			"description" : "I met some amazing folks here at Uni and I'll never forget them.",
 			"date" : "Feb-29-2016"
 		},
 
@@ -143,18 +143,18 @@
 			"circle_position" : "fa fa-circle invert",
 			"head" : "Paris Trip",
 			"location" : "paris",
-			"img" : "img/user/paris.jpg",
-			"description" : "I decided to take a week break and went to Paris. It was a lovely time.",
+			"img" : "img/user/hogwarts.jpg",
+			"description" : "This school looks amazing any time of the year. I do get some weird feelings about this though...",
 			"date" : "Feb-14-2016"
 		},
 
 		{
 			"invert" : "",
 			"circle_position" : "fa fa-circle",
-			"head" : "First Adventure!",
+			"head" : "A New Beginning",
 			"location" : "ucsd",
-			"img" : "img/user/ucsd.jpg",
-			"description" : "Starting out my first adventure of year!",
+			"img" : "img/user/railway.jpg",
+			"description" : "I welcome a new journey in my life! I will be the best person I can be.",
 			"date" : "Jan-5-2016"
 		}
 	] 
