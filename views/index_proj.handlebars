@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="../css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/custom_changes.css">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -117,9 +118,8 @@
         <!-- /.container -->
     </section>
 
-    <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
-        <div class="container">
+        <div class="container feat_container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2>Featured Trips</h2>
@@ -129,11 +129,12 @@
                         <div class="col-md-6" id="feature_diary">
                             <div class="portfolio-item">
                                 <a href="/travel_diary">
-                                    <span class="caption">
+                                    <!-- <span class="caption">
                                         <h2>{{person}}</h2>
                                         <p class="desc">{{description}}</p>
-                                    </span>
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                    </span> -->
+                                    <img id="feat_img" class="img-portfolio img-responsive" src="img/portfolio-1.jpg" />
+                                    <p id="feat_name">{{person}}</p>
                                 </a>
                             </div>
                         </div>
@@ -141,9 +142,7 @@
                     </div>
                     <!-- /.row (nested) -->
 
-                    <a href="/search_results" class="btn btn-dark btn-lg">View More Trips</a>
-                    <!-- <a href="/saved_trips" class="btn btn-dark btn-lg">View Saved Trips</a> -->
-                    <!-- <a href="/signin" class="btn btn-dark btn-lg" id="sign">Sign Up</a> -->
+                    <a href="/search_results_feat" class="btn btn-dark btn-lg">View More Trips</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
