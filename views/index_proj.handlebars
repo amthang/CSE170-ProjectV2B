@@ -55,7 +55,7 @@
                     </div>
                     <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="/create_account" id="createaccount" class="btn btn-dark btn-lg"><i class="fa fa-user fa-fw"></i> <span class="network-name">Create Account</span></a>
+                                <a href="/create_account" onclick="ga('create', 'event', 'create account', 'click');" class="btn btn-dark btn-lg"><i class="fa fa-user fa-fw"></i> <span class="network-name">Create Account</span></a>
                             </li>
                             <li>
                                 <a href="/signin" class="btn btn-dark btn-lg"><i class="fa fa-home fa-fw"></i> <span class="network-name">Sign In</span></a>
@@ -240,13 +240,6 @@
     });
 </script>
 
-<script>
-    document.getElementById("createaccount").addEventListener("click", sendGA);
-
-    function sendGA() {
-        ga('create', 'event', 'create account', 'click');
-    }
-</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
